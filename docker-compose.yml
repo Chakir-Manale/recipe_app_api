@@ -7,13 +7,13 @@ services:
     ports:
         - "8000:8000"
     volumes:
-        - .:/code
+        - .:/app
      # - logvolume01:/var/log
     command: 
         sh -c "python manage.py runserver 0.0.0.0:8000"
-    links:
-        - redis
-  redis:
-    image: redis
+#    links:
+#        - redis
+#  redis:
+#    image: redis
 #volumes:
 #  logvolume01: {}
